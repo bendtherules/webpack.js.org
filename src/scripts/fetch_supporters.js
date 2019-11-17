@@ -15,6 +15,7 @@ request('https://opencollective.com/webpack/members.json', (err, response, body)
 
   for (const item of content) {
     item.totalDonations = item.totalAmountDonated;
+    item.id = item.MemberId;
     for (const key of REQUIRED_KEYS) {
       if(!item || typeof item !== "object") throw new Error(`backer info item (${JSON.stringify(item)} is not an object`);
       if(!(key in item)) throw new Error(`backer info item (${JSON.stringify(item)} doesn't include ${key}`);
