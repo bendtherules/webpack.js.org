@@ -1,0 +1,7 @@
+# Netlify custom redirect - Redirect other (old) domains to webpack3.com (new primary domain)
+
+# Redirect domain aliases to primary domain
+https://webpack-v3.jsx.app/* https://webpack3.com/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://webpack-v3.netlify.com/* https://webpack3.com/:splat 301!
