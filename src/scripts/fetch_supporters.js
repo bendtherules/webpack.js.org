@@ -4,7 +4,7 @@ const request = require('request');
 
 const REQUIRED_KEYS = ["totalDonations", "id"];
 
-request('https://opencollective.com/api/groups/webpack/backers', (err, response, body) => {
+request('https://opencollective.com/webpack/members.json', (err, response, body) => {
   if (err) console.error('Failed to fetch backers: ', err);
 
   // Basic validation
